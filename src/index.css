@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+/* 1. Base colors */
+:root {
+  /* Gray */
+  --color-gray-100: #f3f4f6;
+  --color-gray-800: #1f2937;
+
+  /* Red */
+  --color-red-100: #fee2e2;
+  --color-red-800: #991b1b;
+
+  /* Yellow */
+  --color-yellow-100: #fef3c7;
+  --color-yellow-800: #92400e;
+
+  /* Green */
+  --color-green-100: #d1fae5;
+  --color-green-800: #065f46;
+
+  /* Blue */
+  --color-blue-100: #dbeafe;
+  --color-blue-800: #1e40af;
+
+  /* Indigo */
+  --color-indigo-100: #e0e7ff;
+  --color-indigo-800: #3730a3;
+
+  /* Purple */
+  --color-purple-100: #f3e8ff;
+  --color-purple-800: #6b21a8;
+
+  /* Pink */
+  --color-pink-100: #fce7f3;
+  --color-pink-800: #9d174d;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================
+   2. Utility Classes   
+   ========================================== */
+.bg-gray {
+  background-color: var(--color-gray-100);
+}
+.text-gray {
+  color: var(--color-gray-800);
+}
+
+.bg-red {
+  background-color: var(--color-red-100);
+}
+.text-red {
+  color: var(--color-red-800);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow-100);
+}
+.text-yellow {
+  color: var(--color-yellow-800);
+}
+
+.bg-green {
+  background-color: var(--color-green-100);
+}
+.text-green {
+  color: var(--color-green-800);
+}
+
+.bg-blue {
+  background-color: var(--color-blue-100);
+}
+.text-blue {
+  color: var(--color-blue-800);
+}
+
+.bg-indigo {
+  background-color: var(--color-indigo-100);
+}
+.text-indigo {
+  color: var(--color-indigo-800);
+}
+
+.bg-purple {
+  background-color: var(--color-purple-100);
+}
+.text-purple {
+  color: var(--color-purple-800);
+}
+
+.bg-pink {
+  background-color: var(--color-pink-100);
+}
+.text-pink {
+  color: var(--color-pink-800);
+}
+
+/* ==========================================
+   3. Badge Styles  
+   ========================================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* shapes */
+.square {
+  border-radius: 6px;
+}
+
+.pill {
+  border-radius: 9999px;
+}
