@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-/* 1. Base colors */
+/* Base colors */
 :root {
   /* Gray */
   --color-gray-100: #f3f4f6;
@@ -51,10 +51,12 @@ html {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
+
 /* ==========================================
-   2. Utility Classes   
+   Utility Classes   
    ========================================== */
 .bg-gray {
   background-color: var(--color-gray-100);
@@ -113,7 +115,7 @@ html {
 }
 
 /* ==========================================
-   3. Badge Styles  
+   Badge Styles  
    ========================================== */
 .badge {
   display: inline-flex;
@@ -135,4 +137,61 @@ html {
 
 .pill {
   border-radius: 9999px;
+}
+
+/* ==========================================
+   Banner Styles  
+   ========================================== */
+.banner {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: left;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* --- Single line banner style --- */
+.banner.single-line {
+  align-items: center;
+}
+
+/* Single line banner title */
+.banner.single-line .banner-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* --- Multi line banner style --- */
+.banner.multi-line {
+  align-items: flex-start;
+}
+
+/* Multi line banner content */
+.banner.multi-line .banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* gap between title and description */
+}
+
+.banner.multi-line .banner-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.banner.multi-line .banner-description {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* banner icon style */
+.banner-icon {
+  flex-shrink: 0; /* prevent icon from shrinking */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
 }
