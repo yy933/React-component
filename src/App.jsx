@@ -61,9 +61,13 @@ function App() {
       <h2>Cards</h2>
       <div className="container">
         <Card>
-          <Card.Icon></Card.Icon>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Content>Card Content</Card.Content>
+          <Card.Icon color="indigo"></Card.Icon>
+          <Card.Title>Array.fromAsync()</Card.Title>
+          <Card.Content>
+            The Array.fromAsync() static method creates a new, shallow-copied
+            Array instance from an async iterable, iterable, or array-like
+            object.
+          </Card.Content>
         </Card>
       </div>
     </div>

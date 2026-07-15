@@ -70,57 +70,79 @@ html {
 /* ==========================================
    Utility Classes   
    ========================================== */
-.bg-gray {
+/* light background */
+.bg-gray-light {
   background-color: var(--color-gray-100);
 }
-.text-gray {
-  color: var(--color-gray-800);
+.bg-red-light {
+  background-color: var(--color-red-100);
+}
+.bg-yellow-light {
+  background-color: var(--color-yellow-100);
+}
+.bg-green-light {
+  background-color: var(--color-green-100);
+}
+.bg-blue-light {
+  background-color: var(--color-blue-100);
+}
+.bg-indigo-light {
+  background-color: var(--color-indigo-100);
+}
+.bg-purple-light {
+  background-color: var(--color-purple-100);
+}
+.bg-pink-light {
+  background-color: var(--color-pink-100);
 }
 
-.bg-red {
-  background-color: var(--color-red-100);
+/* dark background */
+.bg-gray-dark {
+  background-color: var(--color-gray-800);
+}
+.bg-red-dark {
+  background-color: var(--color-red-800);
+}
+.bg-yellow-dark {
+  background-color: var(--color-yellow-800);
+}
+.bg-green-dark {
+  background-color: var(--color-green-800);
+}
+.bg-blue-dark {
+  background-color: var(--color-blue-800);
+}
+.bg-indigo-dark {
+  background-color: var(--color-indigo-800);
+}
+.bg-purple-dark {
+  background-color: var(--color-purple-800);
+}
+.bg-pink-dark {
+  background-color: var(--color-pink-800);
+}
+
+/* text colors */
+.text-gray {
+  color: var(--color-gray-800);
 }
 .text-red {
   color: var(--color-red-800);
 }
-
-.bg-yellow {
-  background-color: var(--color-yellow-100);
-}
 .text-yellow {
   color: var(--color-yellow-800);
-}
-
-.bg-green {
-  background-color: var(--color-green-100);
 }
 .text-green {
   color: var(--color-green-800);
 }
-
-.bg-blue {
-  background-color: var(--color-blue-100);
-}
 .text-blue {
   color: var(--color-blue-800);
-}
-
-.bg-indigo {
-  background-color: var(--color-indigo-100);
 }
 .text-indigo {
   color: var(--color-indigo-800);
 }
-
-.bg-purple {
-  background-color: var(--color-purple-100);
-}
 .text-purple {
   color: var(--color-purple-800);
-}
-
-.bg-pink {
-  background-color: var(--color-pink-100);
 }
 .text-pink {
   color: var(--color-pink-800);
@@ -242,15 +264,13 @@ html {
 }
 
 .card-title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.05em;
 }
 
 .card-content {
-  font-size: 1.25rem;
-  letter-spacing: 0.05em;
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 
@@ -264,7 +284,6 @@ html {
   justify-content: center;
   width: 3rem;
   height: 3rem;
-  background-color: #2563eb;
   color: #ffffff;
   border-radius: 4px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);

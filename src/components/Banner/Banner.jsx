@@ -21,7 +21,7 @@ export default function Banner({ children, status = "success" }) {
   const className = clsx(
     "banner",
     hasDescription ? "multi-line" : "single-line",
-    `bg-${statusColor[status]}`,
+    `bg-${statusColor[status]}-light`,
     `text-${statusColor[status]}`,
   );
   return (
