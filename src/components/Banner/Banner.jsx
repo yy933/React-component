@@ -1,16 +1,17 @@
-import React from "react";
+import React, { createContext } from "react";
 import { clsx } from "clsx";
 
+const BannerContext = createContext();
 export default function Banner({ children, status = "succeess" }) {
   const childrenArray = React.Children.toArray(children);
 
-  const hasDescription = childrenArray.some((child) => 
-    React.isValidElement(child) &&
+  const hasDescription = childrenArray.some(
+    (child) =>
+      React.isValidElement(child) &&
       child.type &&
-      child.type.componentType === "BannerDescription"
+      child.type.componentType === "BannerDescription",
   );
 
-  
   const statusColor = {
     success: "green",
     warning: "yellow",
@@ -23,5 +24,11 @@ export default function Banner({ children, status = "succeess" }) {
     `bg-${statusColor[status]}`,
     `text-${statusColor[status]}`,
   );
-  return <div className={className}>{children}</div>;
+  return (
+    <BannerContext.Provider value={{ status }}>
+      <div className={className}>{children}</div>
+    </BannerContext.Provider>
+  );
 }
+
+export { BannerContext };

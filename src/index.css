@@ -157,11 +157,17 @@ html {
 .banner {
   display: flex;
   width: 100%;
-  padding: 1.2rem;
-  border-radius: 8px;
+  padding: 0.75rem 1rem;;
+  border-radius: 10px;
   text-align: left;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 16px;
+}
+
+.banner-title-container {
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 /* --- Single line banner style --- */
@@ -171,8 +177,9 @@ html {
 
 /* Single line banner title */
 .banner.single-line .banner-title {
-  font-size: 14px;
+  font-size: 1.25rem;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 /* --- Multi line banner style --- */
@@ -185,14 +192,14 @@ html {
 
 /* Multi line banner content */
 .banner.multi-line .banner-title {
-  font-size: 14px;
+  font-size: 1.25rem;
   font-weight: 700;
+  line-height: 1.3;
 }
 
 .banner.multi-line .banner-description {
-  font-size: 14px;
-  line-height: 1.5;
-  opacity: 0.85;
+  font-size: 1rem;
+  opacity: 0.9;
 }
 
 /* banner icon style */
@@ -201,6 +208,6 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 1.5rem;
+  height: 1.5rem;
 }

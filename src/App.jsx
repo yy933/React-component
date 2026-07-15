@@ -11,9 +11,12 @@ function App() {
       </div>
 
       <div className="container">
-        <Banner status="warning">
-          <Banner.Title>Warning</Banner.Title>
-          <Banner.Description>Warning description</Banner.Description>
+        <Banner status="success">
+          <div className="banner-title-container">
+            <Banner.Icon />
+            <Banner.Title>Title goes here</Banner.Title>
+          </div>
+          <Banner.Description>Description goes here!</Banner.Description>
         </Banner>
       </div>
     </div>
