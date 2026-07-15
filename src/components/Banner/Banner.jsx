@@ -2,7 +2,7 @@ import React, { createContext } from "react";
 import { clsx } from "clsx";
 
 const BannerContext = createContext();
-export default function Banner({ children, status = "succeess" }) {
+export default function Banner({ children, status = "success" }) {
   const childrenArray = React.Children.toArray(children);
 
   const hasDescription = childrenArray.some(
