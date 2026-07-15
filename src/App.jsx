@@ -2,15 +2,7 @@ import Badge from "./components/Badge/Badge";
 import Banner from "./components/Banner/index";
 import Card from "./components/Card/index";
 
-const badgeColors = [
-  "red",
-  "yellow",
-  "green",
-  "blue",
-  "indigo",
-  "purple",
-  "pink",
-];
+const colors = ["red", "yellow", "green", "blue", "indigo", "purple", "pink"];
 const badgeVariants = ["square", "pill"];
 const bannerStatus = ["success", "warning", "error", "neutral"];
 function App() {
@@ -22,7 +14,7 @@ function App() {
         className="container"
         style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
       >
-        {badgeColors.map((color) =>
+        {colors.map((color) =>
           badgeVariants.map((variant) => {
             const badgeKey = `${color}-${variant}`;
             return (
@@ -40,7 +32,7 @@ function App() {
       >
         <h3>Single line banner</h3>
         {bannerStatus.map((status) => (
-          <Banner status={status}>
+          <Banner status={status} key={status}>
             <div className="banner-title-container">
               <Banner.Icon />
               <Banner.Title>Title goes here</Banner.Title>
@@ -49,7 +41,7 @@ function App() {
         ))}
         <h3>Multi line banner</h3>
         {bannerStatus.map((status) => (
-          <Banner status={status}>
+          <Banner status={status} key={status}>
             <div className="banner-title-container">
               <Banner.Icon />
               <Banner.Title>Title goes here</Banner.Title>
@@ -59,16 +51,24 @@ function App() {
         ))}
       </div>
       <h2>Cards</h2>
-      <div className="container">
-        <Card>
-          <Card.Icon color="indigo"></Card.Icon>
-          <Card.Title>Array.fromAsync()</Card.Title>
-          <Card.Content>
-            The Array.fromAsync() static method creates a new, shallow-copied
-            Array instance from an async iterable, iterable, or array-like
-            object.
-          </Card.Content>
-        </Card>
+      <div
+        className="container"
+        style={{
+          marginTop: "50px",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          gap: "50px",
+        }}
+      >
+        {colors.map((color) => (
+          <Card key={color}>
+            <Card.Icon color={color}></Card.Icon>
+            <Card.Title>Card Title goes here</Card.Title>
+            <Card.Content>
+              This is card content section. You can put whatever you want here.
+            </Card.Content>
+          </Card>
+        ))}
       </div>
     </div>
   );
