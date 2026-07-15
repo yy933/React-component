@@ -1,6 +1,7 @@
 import Badge from "./components/Badge/Badge";
 import Banner from "./components/Banner/index";
 import Card from "./components/Card/index";
+import Testimonial from "./components/Testimonial/index";
 
 const colors = ["red", "yellow", "green", "blue", "indigo", "purple", "pink"];
 const badgeVariants = ["square", "pill"];
@@ -69,6 +70,23 @@ function App() {
             </Card.Content>
           </Card>
         ))}
+      </div>
+      <h2>Testimonials</h2>
+      <div className="container">
+        <Testimonial>
+          <Testimonial.WithImage image="/testimonial-sample.webp">
+            <Testimonial.Header>Testimonial Header</Testimonial.Header>
+            <Testimonial.Content>Testimonial Content</Testimonial.Content>
+            <Testimonial.Footer>Testimonial Footer</Testimonial.Footer>
+          </Testimonial.WithImage>
+        </Testimonial>
+        <Testimonial>
+          <Testimonial.WithoutImage>
+            <Testimonial.Header>Testimonial Header</Testimonial.Header>
+            <Testimonial.Content>Testimonial Content</Testimonial.Content>
+            <Testimonial.Footer>Testimonial Footer</Testimonial.Footer>
+          </Testimonial.WithoutImage>
+        </Testimonial>
       </div>
     </div>
   );
