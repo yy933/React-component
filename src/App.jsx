@@ -1,5 +1,6 @@
 import Badge from "./components/Badge/Badge";
 import Banner from "./components/Banner/index";
+import Card from "./components/Card/index";
 
 const badgeColors = [
   "red",
@@ -56,6 +57,14 @@ function App() {
             <Banner.Description>Description goes here!</Banner.Description>
           </Banner>
         ))}
+      </div>
+      <h2>Cards</h2>
+      <div className="container">
+        <Card>
+          <Card.Icon></Card.Icon>
+          <Card.Title>Card Title</Card.Title>
+          <Card.Content>Card Content</Card.Content>
+        </Card>
       </div>
     </div>
   );
