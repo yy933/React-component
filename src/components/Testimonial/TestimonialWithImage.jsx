@@ -1,6 +1,15 @@
-export default function TestimonialWithImage({ children, image, imageAlt }) {
+import { clsx } from "clsx";
+export default function TestimonialWithImage({
+  children,
+  image,
+  imageAlt,
+  className,
+  style,
+  ...rest
+}) {
+  const combinedClassName = clsx("testimonial-layout-with-image", className);
   return (
-    <div className="testimonial-layout-with-image">
+    <div className={combinedClassName} style={style} {...rest}>
       {image && (
         <div className="testimonial-image-container">
           <img src={image} alt={imageAlt} className="testimonial-image" />

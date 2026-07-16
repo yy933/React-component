@@ -2,7 +2,13 @@ import React, { createContext } from "react";
 import { clsx } from "clsx";
 
 const BannerContext = createContext();
-export default function Banner({ children, status = "success" }) {
+export default function Banner({
+  children,
+  status = "success",
+  className,
+  style,
+  ...rest
+}) {
   const childrenArray = React.Children.toArray(children);
 
   const hasDescription = childrenArray.some(
@@ -18,15 +24,18 @@ export default function Banner({ children, status = "success" }) {
     error: "red",
     neutral: "blue",
   };
-  const className = clsx(
+  const combinedClassName = clsx(
     "banner",
     hasDescription ? "multi-line" : "single-line",
     `bg-${statusColor[status]}-light`,
     `text-${statusColor[status]}`,
+    className,
   );
   return (
     <BannerContext.Provider value={{ status }}>
-      <div className={className}>{children}</div>
+      <div className={combinedClassName} style={style} {...rest}>
+        {children}
+      </div>
     </BannerContext.Provider>
   );
 }
