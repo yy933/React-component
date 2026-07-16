@@ -2,6 +2,9 @@
 
 A React + Vite project that showcases a set of reusable UI components in a single, polished demo app.
 
+## Live demo
+Check out live demo here: [React Reusable Components](https://react-reusable-component.netlify.app/)
+
 ## What this project includes
 
 This app demonstrates several component patterns and styles, including:
