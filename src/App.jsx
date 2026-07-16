@@ -6,10 +6,24 @@ import Testimonial from "./components/Testimonial/index";
 const colors = ["red", "yellow", "green", "blue", "indigo", "purple", "pink"];
 const badgeVariants = ["square", "pill"];
 const bannerStatus = ["success", "warning", "error", "neutral"];
+const components = ["Badge", "Banner", "Card", "Testimonial"];
 function App() {
   return (
     <div>
       <h1>Reusable Components Display</h1>
+      <div
+        className="container"
+        style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
+      >
+        {components.map((component) => {
+          return (
+            <Badge key={`${component}-button`} color="gray" variant="square" style={{ cursor: "pointer" }}>
+              {component}
+            </Badge>
+          );
+        })}
+      </div>
+
       <h2>Badges</h2>
       <div
         className="container"
