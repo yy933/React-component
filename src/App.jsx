@@ -73,20 +73,23 @@ function App() {
       </div>
       <h2>Testimonials</h2>
       <div className="container">
-        <Testimonial>
-          <Testimonial.WithImage image="/testimonial-sample.webp">
-            <Testimonial.Header>Testimonial Header</Testimonial.Header>
-            <Testimonial.Content>Testimonial Content</Testimonial.Content>
-            <Testimonial.Footer>Testimonial Footer</Testimonial.Footer>
-          </Testimonial.WithImage>
-        </Testimonial>
-        <Testimonial>
-          <Testimonial.WithoutImage>
-            <Testimonial.Header>Testimonial Header</Testimonial.Header>
-            <Testimonial.Content>Testimonial Content</Testimonial.Content>
-            <Testimonial.Footer>Testimonial Footer</Testimonial.Footer>
-          </Testimonial.WithoutImage>
-        </Testimonial>
+        <Testimonial.WithImage image="/testimonial-sample.webp" imageAlt="May Andersons profile picture">
+          <Testimonial.Header>May Andersons</Testimonial.Header>
+          <Testimonial.Content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+          </Testimonial.Content>
+          <Testimonial.Footer>Workcation, CTO</Testimonial.Footer>
+        </Testimonial.WithImage>
+
+        <Testimonial.WithoutImage>
+          <Testimonial.Header>Workcation Logo</Testimonial.Header>
+          <Testimonial.Content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+          </Testimonial.Content>
+          <Testimonial.Footer>
+            May Andersons / Workcation, CTO
+          </Testimonial.Footer>
+        </Testimonial.WithoutImage>
       </div>
     </div>
   );
