@@ -1,16 +1,61 @@
-# React + Vite
+# React Component Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite project that showcases a set of reusable UI components in a single, polished demo app.
 
-Currently, two official plugins are available:
+## What this project includes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This app demonstrates several component patterns and styles, including:
 
-## React Compiler
+- Badge components with different colors and variants
+- Banner components for success, warning, error, and neutral status
+- Card components with icon, title, and content sections
+- Testimonial components with and without images
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+- React 19
+- Vite 8
+- ESLint
+- React Icons
+- clsx
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting started
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Open the local Vite URL shown in the terminal.
+
+## Available scripts
+
+- `npm run dev` — start the local development server
+- `npm run build` — create a production build
+- `npm run preview` — preview the production build locally
+- `npm run lint` — run ESLint checks
+
+## Project structure
+
+```text
+src/
+  App.jsx
+  index.css
+  components/
+    Badge/
+    Banner/
+    Button/
+    Card/
+    Testimonial/
+```
+
+## Notes
+
+The demo uses sample content and image assets to illustrate how the components can be composed into a realistic interface.
