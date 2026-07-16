@@ -72,8 +72,11 @@ function App() {
         ))}
       </div>
       <h2>Testimonials</h2>
-      <div className="container">
-        <Testimonial.WithImage image="/testimonial-sample.webp" imageAlt="May Andersons profile picture">
+      <div className=".container testimonial-container">
+        <Testimonial.WithImage
+          image="/testimonial-sample.webp"
+          imageAlt="May Andersons profile picture"
+        >
           <Testimonial.Header>May Andersons</Testimonial.Header>
           <Testimonial.Content>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit...
