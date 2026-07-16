@@ -344,17 +344,17 @@ h3 {
   border-radius: 12px;
   padding: 2rem;
   margin-top: 80px;
-  gap: 1.5rem;
+  gap: 2.5rem;
   box-sizing: border-box;
 }
 
 /* testimonial image */
 .testimonial-image-container {
   flex-shrink: 0;
-  margin-top: -5rem;
+  margin-top: -7rem;
   margin-left: 0;
   width: 100%;
-  max-width: 420px;
+  max-width: 350px;
   height: auto;
   aspect-ratio: 4 / 3;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
@@ -374,6 +374,7 @@ h3 {
   display: flex;
   flex-direction: column;
   text-align: left;
+  padding-top: 1.5rem;
 }
 
 /* quotation mark */
@@ -383,7 +384,7 @@ h3 {
   font-size: 5rem;
   line-height: 1;
   position: absolute;
-  top: -3rem;
+  top: -1.5rem;
   left: -0.2rem;
   color: rgba(255, 255, 255, 0.15);
   pointer-events: none;
@@ -404,6 +405,14 @@ h3 {
     margin-top: 0;
     margin-left: -4.5rem;
     aspect-ratio: 1/1;
+  }
+
+  .testimonial-body {
+    padding-top: 0.5rem;
+  }
+
+  .testimonial-body::before {
+    top: -2.5rem;
   }
 }
 
@@ -520,4 +529,25 @@ h3 {
     width: 50px;
     height: 50px;
   }
+}
+
+/* ==========================================
+   Navigation Badge Styles 
+   ========================================== */
+.nav-badge {
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-badge:hover {
+  background-color: var(--color-gray-800) !important;
+  color: var(--color-gray-100) !important;
+  transform: translateY(-2px);
+}
+
+.nav-badge:active {
+  transform: translateY(0);
 }

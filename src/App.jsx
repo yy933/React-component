@@ -33,7 +33,7 @@ function App() {
               key={`${component}-button`}
               color="gray"
               variant="square"
-              style={{ cursor: "pointer" }}
+              className="nav-badge"
               onClick={() => scrollToSection(component.toLowerCase())}
             >
               {component}
@@ -42,10 +42,7 @@ function App() {
         })}
       </div>
 
-      <div
-        id="badge"
-        className="container"
-      >
+      <div id="badge" className="container">
         <h2>Badges</h2>
         <div
           className="badge-contents"
@@ -68,10 +65,7 @@ function App() {
         </div>
       </div>
 
-      <div
-        id="banner"
-        className="container"
-      >
+      <div id="banner" className="container">
         <h2>Banners</h2>
         <h3>Single line banner</h3>
         {bannerStatus.map((status) => (
@@ -94,10 +88,7 @@ function App() {
         ))}
       </div>
 
-      <div
-        id="card"
-        className="container"
-      >
+      <div id="card" className="container">
         <h2>Cards</h2>
         <div
           className="cards-content"
@@ -122,10 +113,7 @@ function App() {
         </div>
       </div>
 
-      <div
-        id="testimonial"
-        className="container testimonial-container"
-      >
+      <div id="testimonial" className="container testimonial-container">
         <h2>Testimonials</h2>
         <Testimonial.WithImage
           image="/testimonial-sample.webp"
